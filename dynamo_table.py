@@ -37,4 +37,9 @@ info_del = student_table.delete_item(Key={"product_id":"prod100"})
 
 # Querying the records
 querry1 = student_table.scan(Select = "ALL_ATTRIBUTES", FilterExpression = Attr("price").eq(10000) & Attr('GST').eq(13))
-pprint(querry1)
+# pprint(querry1)
+
+info_del1 = student_table.delete_item(Key={"product_id":"prod03"})
+
+querry2 = student_table.scan(Select = "ALL_ATTRIBUTES", FilterExpression = Attr())
+
