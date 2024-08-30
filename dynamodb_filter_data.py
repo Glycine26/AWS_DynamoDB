@@ -12,7 +12,7 @@ table = dynamodb_resource.Table('product_table')
 
 
 response = table.scan(
-    FilterExpression = Attr('user_contact').contains('9449195773') & Attr('user_name').contains('Subiksha')
+    FilterExpression = Attr('user_contact').contains('9449195') & Attr('user_name').contains('Subi')
 )
 
 for item in response['Items']:
